@@ -20,6 +20,7 @@ function displayMessage(msgText, msgType) {
 
     var closeBtn = document.createElement('button');
     closeBtn.textContent = 'x';
+    closeBtn.style.color = 'black';
     panel.appendChild(closeBtn);
 
     btn.setAttribute('disabled', true);
@@ -32,6 +33,7 @@ function displayMessage(msgText, msgType) {
     if (msgType === 'warning') {
         msg.style.backgroundImage = 'url(icons/warning.png)';
         panel.style.backgroundColor = 'red';
+        panel.style.fontWeight = 'bold';
     } else if (msgType === 'chat') {
         msg.style.backgroundImage = 'url(icons/chat.png)';
         panel.style.backgroundColor = 'aqua';

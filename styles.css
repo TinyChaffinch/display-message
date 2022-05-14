@@ -1,3 +1,28 @@
+body {
+    display: grid;
+    justify-items: center;
+    background-image: url(fon.jpg);
+    background-size: cover;
+    color: white;
+    text-align: center;
+    text-shadow: 4px 4px 2px black;
+    font-family: helvetica, sans-serif;
+    width: 90%;
+    max-width: 800px;
+    min-width: 280px;
+    margin: 0 auto;
+    word-wrap: normal;
+}
+
+.btn, .checkbox {
+    margin-top: 20px;
+}
+
+.btn {
+    height: 2rem;
+    font-weight: bold;
+}
+
 .msgBox {
     position: absolute;
     top: 50%;
