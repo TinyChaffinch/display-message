@@ -1,9 +1,9 @@
 var btn = document.querySelector('button');
 btn.onclick = function () {
     if (document.getElementById("chat").checked) {
-        displayMessage('Brian: Hi there, how are you today?','chat');
+        displayMessage('Богдан: Я здесь','chat');
     } else {
-        displayMessage('Your inbox is almost full — delete some mails', 'warning');
+        displayMessage('Вы горбитесь. Выпрямите спину', 'warning');
     }
 };
 
@@ -22,8 +22,11 @@ function displayMessage(msgText, msgType) {
     closeBtn.textContent = 'x';
     panel.appendChild(closeBtn);
 
+    btn.setAttribute('disabled', true);
+
     closeBtn.onclick = function () {
         panel.parentNode.removeChild(panel);
+        btn.removeAttribute('disabled');
     }
 
     if (msgType === 'warning') {
